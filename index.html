@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Insight Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                900: 'var(--primary-900)', // Main heading background / Text color
+                800: 'var(--primary-800)',
+              },
+              chart: {
+                1: 'var(--color-chart-1)',
+                2: 'var(--color-chart-2)',
+                3: 'var(--color-chart-3)',
+                4: 'var(--color-chart-4)',
+                5: 'var(--color-chart-5)',
+                6: 'var(--color-chart-6)',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for better aesthetics in dashboard panels */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-900);
+      }
+      
+      /* Default Theme Variables (Navy) to prevent FOUC */
+      :root {
+        --primary-900: #021640;
+        --primary-800: #0F2952;
+        --color-chart-1: #021640;
+        --color-chart-2: #0066CC;
+        --color-chart-3: #0099CC;
+        --color-chart-4: #4572C4;
+        --color-chart-5: #558ED5;
+        --color-chart-6: #1F4E79;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.4.1",
+    "@google/genai": "https://esm.run/@google/genai"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-200">
+    <div id="root"></div>
+  </body>
+</html>
